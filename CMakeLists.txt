@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   nav_msgs
   roscpp
   rospy
+  aerowake_flight
   std_msgs
 )
 
@@ -22,7 +23,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
+catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -107,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES aerowake_groundstation
-#  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs
+  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
